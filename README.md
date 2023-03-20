@@ -19,6 +19,7 @@ cd grav-nginx-php8
 
 3. Edit the db service environment variables in the docker-compose.yml file to set your desired MySQL/MariaDB root password and username:
 db:
+
   image: mariadb:latest
   container_name: grav-mariadb
   restart: always
