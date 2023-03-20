@@ -20,7 +20,7 @@ cd grav-nginx-php8
 3. Edit the db service environment variables in the docker-compose.yml file to set your desired MySQL/MariaDB root password and username:
 db:
 
-  ```sh
+  ```yaml
   image: mariadb:latest
   container_name: grav-mariadb
   restart: always
@@ -36,8 +36,7 @@ db:
     interval: 30s
     timeout: 10s
     retries: 5
-
-   '''
+   ```
 
 4. Run the docker-compose up command to start the containers:
 docker-compose up -d
@@ -46,9 +45,9 @@ docker-compose up -d
 
 ## Configuration
 
-    The web service is an Nginx web server that listens on port 80 and serves static content from the html directory.
-    The app service runs PHP 8.0 FPM and serves the Grav CMS application. The PHP configuration can be edited in the php.ini file.
-    The db service runs a MySQL/MariaDB database server and stores data in the db directory.
+- The web service is an Nginx web server that listens on port 80 and serves static content from the html directory.
+- The app service runs PHP 8.0 FPM and serves the Grav CMS application. The PHP configuration can be edited in the php.ini file.
+- The db service runs a MySQL/MariaDB database server and stores data in the db directory.
     
 ## License
 
