@@ -20,6 +20,7 @@ cd grav-nginx-php8
 3. Edit the db service environment variables in the docker-compose.yml file to set your desired MySQL/MariaDB root password and username:
 db:
 
+  ```sh
   image: mariadb:latest
   container_name: grav-mariadb
   restart: always
@@ -35,6 +36,8 @@ db:
     interval: 30s
     timeout: 10s
     retries: 5
+
+   '''
 
 4. Run the docker-compose up command to start the containers:
 docker-compose up -d
